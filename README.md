@@ -1,7 +1,8 @@
-**LARAVEL-MULTIVENDOR-ECOMMERCE WEBSITE
-#Project summary
+# LARAVEL-MULTIVENDOR-ECOMMERCE WEBSITE
+## Project summary
 A full-featured multi-vendor marketplace where sellers upload products and customers purchase them online using Stripe & M-Pesa.
-#Core Features:
+
+## Core Features:
 Multi-vendor stores
 
 Product CRUD + image uploads
@@ -13,19 +14,31 @@ Checkout + payment integration
 Admin analytics dashboard
 
 
-#Tech Stack:
- Laravel 11, Livewire 3, Tailwind CSS, Stripe API, MySQL.
+## Tech Stack:
+**backend**
+  Laravel 11
 
-#Screenshots Section: (leave placeholders for now)
+**database**
+  MySQL
+  
+**payment**
+  Stripe API
+  mpesa
+  
+**Frontend**
+  Livewire 3
+  Tailwind CSS
 
-#Installation Steps:
+## Screenshots Section: 
 
-git clone <repo-link>
+## Installation Steps:
+
+git clone https://github.com/moitalel10945/Laravel-MultiVendor-Ecommerce.git
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan serve
 
 
-#Author Info: 
+## Author Info: 
 Morgan Moitalel + 0792549997
