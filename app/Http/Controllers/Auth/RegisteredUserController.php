@@ -39,12 +39,23 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role_id'=>3,
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        if($user->isAdmin()){
+            return redirect()->route('admin.dashboard');
+        }
+        if($user->isSeller()){
+            return redirect()->route('seller.dashboard');
+        }
+        if($user->isCustomer()){
+            return redirect()->route('storefront');
+        }
+
+        //return redirect(route('dashboard', absolute: false));
     }
 }
